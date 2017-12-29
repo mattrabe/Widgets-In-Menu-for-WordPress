@@ -145,7 +145,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 					$widget_title = $widget_saved[ $widget_num ][ 'title' ];
 
 					// get the name
-					$widget_name = $widget[ 'name' ];
+					$widget_name = preg_replace("/^Mega Menu /", '', $widget[ 'name' ]);
 					$widget_name .= (empty( $widget_title )) ? '' : ': ' . $widget_title;
 
 					// generate tooltip text
